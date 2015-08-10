@@ -1,0 +1,3 @@
+To update
+run chroot.sh
+https://forum.jenkler.se/linux/gentoo-emerge-and-ebuild-tools-t13.html
