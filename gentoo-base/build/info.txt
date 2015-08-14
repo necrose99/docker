@@ -1,3 +1,4 @@
-To update
+Update:
 run chroot.sh
-https://forum.jenkler.se/linux/gentoo-emerge-and-ebuild-tools-t13.html
+  run update.sh in /root/ when chrooted
+run makedist.sh
