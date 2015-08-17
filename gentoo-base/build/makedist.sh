@@ -7,9 +7,13 @@ rm gentoo4.tar.xz &> /dev/null
 rm gentoo5.tar.xz &> /dev/null
 
 rm gentoo-base/root/.bash_history &> /dev/null
+rm gentoo-base/root/update.sh &> /dev/null
 rm -r gentoo-base/tmp/* &> /dev/null
 rm -r gentoo-base/usr/portage &> /dev/null
-rm -r gentoo-base/var/tmp/portage &> /dev/null
+rm -r gentoo-base/usr/share/doc &> /dev/null
+rm -r gentoo-base/usr/share/man/?? &> /dev/null
+rm -r gentoo-base/usr/share/man/??_* &> /dev/null
+rm -r gentoo-base/var/tmp/* &> /dev/null
 rm -r gentoo-base/var/log/* &> /dev/null
 
 cd gentoo-base/
@@ -34,13 +38,13 @@ date '+%H:%M:%S'
 echo -n '   - '
 du -sh ../gentoo3.tar.xz
 echo
-XZ_OPT=-9 bsdtar -Jcf ../gentoo4.tar.xz usr/share/doc usr/share/man
+XZ_OPT=-9 bsdtar -Jcf ../gentoo4.tar.xz usr/share/man
 echo -n 'OK - '
 date '+%H:%M:%S'
 echo -n '   - '
 du -sh ../gentoo4.tar.xz
 echo
-XZ_OPT=-9 bsdtar --exclude="usr/share/doc" --exclude="usr/share/man" -Jcf ../gentoo5.tar.xz usr/share
+XZ_OPT=-9 bsdtar --exclude="usr/share/man" -Jcf ../gentoo5.tar.xz usr/share
 echo -n 'OK - '
 date '+%H:%M:%S'
 echo -n '   - '
