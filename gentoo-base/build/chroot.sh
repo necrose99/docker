@@ -1,11 +1,11 @@
 #!/bin/bash
 
-cp -p update.sh gentoo-base/root/ &> /dev/null
-mount -t proc proc gentoo-base/proc/
-mount --rbind /dev/ gentoo-base/dev/
-mount --rbind /sys/ gentoo-base/sys/
+cp -p update.sh system/root/ &> /dev/null
+mount -t proc proc system/proc/
+mount --rbind /dev/ system/dev/
+mount --rbind /sys/ system/sys/
 
-chroot gentoo-base/ /bin/bash
+chroot system/ /bin/bash
 
-umount -l gentoo-base/proc/ gentoo-base/dev/ gentoo-base/sys/
-rm gentoo-base/root/update.sh &> /dev/null
+umount -l system/proc/ system/dev/ system/sys/
+rm system/root/update.sh &> /dev/null
