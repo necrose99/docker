@@ -3,7 +3,7 @@ MAINTAINER Mikael Jenkler <info@jenkler.com>
 RUN emerge-webrsync -q ; \
 USE="-minimal" emerge --color=n --nospinner -q app-editors/vim ; \
 emerge --color=n --nospinner -q dev-db/mysql dev-vcs/git net-dns/bind-tools net-misc/openssh ; \
-USE="cups" emerge --color=n --nospinner -q dev-java/icedtea-bin ; \
+USE="-alsa -awt -cups -gtk" emerge --color=n --nospinner -q dev-java/icedtea-bin ; \
 USE="cli curl exif gd json mysql mysqli pcre pdo session sqlite ssl suhosin unicode xml xslt" emerge --color=n --nospinner -q dev-lang/php ; \
 rm /root/.bash_history &> /dev/null ; \
 rm -r /tmp/* &> /dev/null ; \
