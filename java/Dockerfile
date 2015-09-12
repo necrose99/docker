@@ -1,7 +1,7 @@
 FROM jenkler/gentoo-base
 MAINTAINER Mikael Jenkler <info@jenkler.com>
 RUN emerge-webrsync -q ; \
-USE="cups" emerge --color=n --nospinner -q dev-java/icedtea-bin ; \
+USE="-alsa -awt -cups -gtk" emerge --color=n --nospinner -q dev-java/icedtea-bin ; \
 emerge --color=n --nospinner -q app-misc/screen ; \
 rm /root/.bash_history &> /dev/null ; \
 rm -r /tmp/* &> /dev/null ; \
