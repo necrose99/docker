@@ -1,8 +1,8 @@
 FROM jenkler/gentoo-base
 MAINTAINER Mikael Jenkler <info@jenkler.com>
 RUN emerge-webrsync -q ; \
-USE="-minimal" emerge --color=n --nospinner -q app-editors/vim ; \
-emerge --color=n --nospinner -q dev-db/mysql dev-vcs/git net-dns/bind-tools net-misc/openssh ; \
+USE="-minimal" emerge --color=n --nospinner -q app-editors/vim dev-db/mongodb ; \
+emerge --color=n --nospinner -q dev-db/mariadb dev-vcs/git net-dns/bind-tools net-misc/openssh ; \
 USE="-alsa -awt -cups -gtk" emerge --color=n --nospinner -q dev-java/icedtea-bin ; \
 USE="cli curl exif gd json mysql mysqli pcre pdo session sqlite ssl suhosin unicode xml xslt" emerge --color=n --nospinner -q dev-lang/php ; \
 rm /root/.bash_history &> /dev/null ; \
