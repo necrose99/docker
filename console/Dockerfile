@@ -4,7 +4,7 @@ RUN emerge-webrsync -q ; \
 USE="-minimal" emerge --color=n --nospinner -q app-editors/vim dev-db/mongodb ; \
 emerge --color=n --nospinner -q dev-db/mariadb dev-vcs/git net-dns/bind-tools net-misc/openssh ; \
 USE="-alsa -awt -cups -gtk" emerge --color=n --nospinner -q dev-java/icedtea-bin ; \
-USE="cli curl exif gd json mysql mysqli pcre pdo session sqlite ssl suhosin unicode xml xslt" emerge --color=n --nospinner -q dev-lang/php ; \
+USE="bcmath cli curl exif gd intl json mysql mysqli opcache pcre pdo session sqlite ssl unicode xml xslt" emerge --color=n --nospinner -q dev-lang/php ; \
 rm /root/.bash_history &> /dev/null ; \
 rm -r /tmp/* &> /dev/null ; \
 rm -r /usr/portage &> /dev/null ; \

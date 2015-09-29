@@ -10,3 +10,5 @@ rm -r /usr/share/man/?? &> /dev/null ; \
 rm -r /usr/share/man/??_* &> /dev/null ; \
 rm -r /var/tmp/* &> /dev/null ; \
 rm -r /var/log/* &> /dev/null
+EXPOSE 27017
+ENTRYPOINT ["mongod"]
