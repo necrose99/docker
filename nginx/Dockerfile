@@ -11,7 +11,8 @@ rm -r /usr/share/doc &> /dev/null ; \
 rm -r /usr/share/man/?? &> /dev/null ; \
 rm -r /usr/share/man/??_* &> /dev/null ; \
 rm -r /var/tmp/* &> /dev/null ; \
-rm -r /var/log/* &> /dev/null
+rm -r /var/log/* &> /dev/null ; \
+mkdir /var/log/nginx
 EXPOSE 80 443
 ENTRYPOINT ["nginx"]
 CMD ["-g", "daemon off;"]
